@@ -9,6 +9,7 @@ php:
   - 7.2
   - 7.3
   - 7.4
+  - 8.0.2
 
 env:
   - LARAVEL_VERSION=">=5.4.0 <5.4.20"
@@ -25,6 +26,8 @@ env:
   - LARAVEL_VERSION="6.*" HORIZON=1
   - LARAVEL_VERSION="7.*"
   - LARAVEL_VERSION="7.*" HORIZON=1
+  - LARAVEL_VERSION="8.*" HORIZON=1
+  - LARAVEL_VERSION="9.*" HORIZON=1
   - LUMEN_VERSION="5.4.*"
   - LUMEN_VERSION="5.5.*"
   - LUMEN_VERSION="5.6.*"
@@ -117,6 +120,10 @@ matrix:
       env: LARAVEL_VERSION="7.*" HORIZON=1
     - php: 7.1
       env: LUMEN_VERSION="7.*"
+    - php: 8.0.2
+      env: LARAVEL_VERSION="9.*"
+    - php: 8.0.2
+      env: LARAVEL_VERSION="9.*" HORIZON=1
 
 
 before_install:
